@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% from "formmacros.html" import render_fields %}
+
+{% block title %}
+    Thermos - Add a URL to Bookmarks
+{% endblock %}
+
+{% block content %}
+    <h1>Add a New URL for Bookmarking</h1>
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <article>
+            <table>
+                {{ render_fields(form.url, size=50) }}
+                {{ render_fields(form.user, size=50) }}
+                {{ render_fields(form.description, size=50) }}
+                <tr>
+                    <td></td>
+                    <td><button type="submit">Submit</button></td>
+                </tr>
+            </table>
+{#            <p>Please enter your bookmark here: <input type="text" name="url"></p>#}
+{#            <p>Please enter your username here: <input type="text" name="user"></p>#}
+{#            <p><button type="submit">Submit</button></p>#}
+        </article>
+    </form>
+{% endblock %}
+
+{% block sidebar %}
+{%  endblock %}

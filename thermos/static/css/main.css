@@ -388,3 +388,41 @@ footer h3{
         page-break-after: avoid;
     }
 }
+
+
+/* flashes styling */
+
+.flashes ul{
+    margin: 0 0;
+    background: lightgreen;
+    color: #000000;
+
+    list-style-type: none;
+    list-style: none;
+}
+
+.flashes ul{
+    background: lightgreen;
+    color: #000000;
+}
+
+article.flashes{
+    margin-bottom: 1em;
+}
+
+
+.error, .error input {
+    color: red;
+}
+
+tr.error td ul {
+    margin-top: 0;
+}
+
+tr.submit button {
+    margin-top: 20px;
+}
+
+input, button{
+    margin-left: 10px;
+}

@@ -1,5 +1,5 @@
 # Pycharm/ Intellij working directory config
-.idea/
+.idea/*
 
 # log files
 *.log
