@@ -426,3 +426,47 @@ tr.submit button {
 input, button{
     margin-left: 10px;
 }
+
+/* =================================================================================
+   Author's custom Styles
+   =================================================================================
+*/
+
+a,
+a:visited{
+    color: darkmagenta;
+}
+a:hover, aside a:hover, aside a:visited:hover{
+    color: hotpink;
+}
+
+/* Bookmark list styling */
+ul.bookmarks li {
+    padding-bottom: .5em;
+    border-top: 1px solid #7EA6BF;
+    padding: 1em 0;
+}
+
+a.header {
+    color: #326783;
+    text-decoration: none;
+    display: block;
+}
+
+a.header h3 {
+    margin: 0 0;
+}
+
+div.info {
+    font-size: .95em;
+    color: #665544
+}
+
+span.editlinks {
+    float: right;
+}
+
+ul.bookmarks {
+    list-style: none none;
+    padding-left: 0;
+}

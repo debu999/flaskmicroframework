@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Thermos --- Bookmarks from user {{ user.username }}
+{% endblock %}
+
+{% block content %}
+    <article>
+        <header>
+            <h1>Bookmarks for {{ user.username }}</h1>
+        </header>
+        <section>
+{#            <ul>#}
+{#                    {% for bm in user.bookmarks %}#}
+{#                        <li>#}
+{#                            <a href="{{ bm.url }}">{{ bm.description }}</a>#}
+{#                            <span class="timestamp">Added at {{ bm.date }}</span>#}
+{#                            {{ bm.description }}#}
+{#                        </li>#}
+{#                        {% else %}#}
+{#                            <li>This user have not added any bookmarks yet. Click on <a href="{{ url_for("add") }}"> Add URL </a> to add new url.</li>#}
+{#                    {% endfor %}#}
+{#                </ul>#}
+            {% if user.bookmarks.count() > 0 %}
+                {% with bookmarks=user.bookmarks %}
+                    {% include "bookmark_list.html" %}
+                {% endwith %}
+            {% else %}
+                <li>This user have not added any bookmarks yet. Click on <a href="{{ url_for("add") }}"> Add URL </a> to add new url.</li>
+            {% endif %}
+        </section>
+    </article>
+{% endblock %}

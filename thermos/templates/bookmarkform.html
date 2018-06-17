@@ -2,18 +2,18 @@
 {% from "formmacros.html" import render_fields %}
 
 {% block title %}
-    Thermos - Add a URL to Bookmarks
+    Thermos - {{ title }}
 {% endblock %}
 
 {% block content %}
-    <h1>Add a New URL for Bookmarking</h1>
+    <h1>{{ title }}</h1>
     <form action="" method="post">
         {{ form.hidden_tag() }}
         <article>
             <table>
                 {{ render_fields(form.url, size=50) }}
-                {{ render_fields(form.user, size=50) }}
                 {{ render_fields(form.description, size=50) }}
+                {{ render_fields(form.tags, size=50) }}
                 <tr>
                     <td></td>
                     <td><button type="submit">Submit</button></td>

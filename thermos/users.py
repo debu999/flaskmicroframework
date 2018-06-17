@@ -1,6 +1,6 @@
 """Users class for thermos project"""
 
-class User:
+class Userobj:
     def __init__(self, fname, lname):
         self.fname = fname
         self.lname = lname

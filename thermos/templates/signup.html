@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% from "formmacros.html" import render_fields %}
+
+{% block title %}
+    Thermos --- Signup
+{% endblock %}
+
+{% block content %}
+        <section>
+            <h1 style="clear:both">Sign Up to Thermos App.</h1>
+            <form action="" method="post">
+                {{ form.hidden_tag() }}
+                <table>
+                    {{ render_fields(form.username, size=40) }}
+                    {{ render_fields(form.email, size=40) }}
+                    {{ render_fields(form.password, size=40) }}
+                    {{ render_fields(form.password2, size=40) }}
+                    {{ render_fields(form.submit) }}
+                </table>
+            </form>
+        </section>
+{% endblock %}
+
+{% block sidebar %}
+{% endblock %}

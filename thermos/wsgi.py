@@ -1,5 +1,8 @@
 """WSGI python file for more running flask app with gunicorn"""
-from thermos.thermos import application
+import sys
+from pprint import pprint as pp
+
+from thermos.views import application
 
 if __name__ == "__main__":
-    application.run()
+    application.run(debug=True)
